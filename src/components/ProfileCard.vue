@@ -30,9 +30,7 @@
           <v-chip
             v-for="hobby in hobbies"
             :key="hobby.label"
-            :href="hobby.href"
             :title="hobby.label"
-            target="_blank"
             small outlined
             @click="showImages(hobby)"
           >
@@ -100,7 +98,6 @@
             :title="link.label"
             :aria-label="link.label"
             target="_blank"
-            rel="noopener noreferrer"
             icon
             small
             class="contact__btn"
@@ -125,7 +122,7 @@
           v-for="img in selected.images"
           :key="img"
         >
-          <v-img :src="img" :alt="selected.label" />
+          <v-img :src="img" />
         </v-window-item>
       </v-window>
 
@@ -227,6 +224,15 @@ export default {
 
   .image {
     border-radius: 4px;
+  }
+
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+    margin-left: 16px;
+    margin-bottom: 20px;
   }
 
   .facts {
