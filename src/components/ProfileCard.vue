@@ -1,5 +1,5 @@
 <template>
-  <v-card class="card" rounded="xl" elevation="3">
+  <v-card class="card" rounded="sm" elevation="3">
 
       <v-row>
 
@@ -25,10 +25,14 @@
 
           <v-divider class="line" />
 
-           <div class="hobbies">
+          <div class="hobbies">
             <v-chip
               v-for="hobby in hobbies"
               :key="hobby.label"
+              :href="hobby.href"
+              :title="hobby.label"
+              target="_blank"
+              rel="noopener noreferrer"
               small outlined
             >
               <v-icon left small>{{ hobby.icon }}</v-icon>
@@ -144,10 +148,22 @@ export default {
         ],
 
         hobbies: [
-          { label: 'ดูฟุตบอล', icon: 'mdi-soccer' },
-          { label: 'เล่นเกม', icon: 'mdi-controller' },
-          { label: 'ดูหนังและซีรี่ย์', icon: 'mdi-movie-open-outline' },
-          { label: 'ฟังเพลง', icon: 'mdi-music-note' },
+          { label: 'ดูฟุตบอล', 
+            icon: 'mdi-soccer',
+            href:'https://www.google.com/search?q=barcelona' 
+          },
+          { label: 'เล่นเกม', 
+            icon: 'mdi-controller',
+            href:'https://www.google.com/search?q=valorant'  
+          },
+          { label: 'ดูหนังและซีรี่ย์', 
+            icon: 'mdi-movie-open-outline',
+            href:'https://www.google.com/search?q=game of throne'
+          },
+          { label: 'ฟังเพลง', 
+            icon: 'mdi-music-note',
+            href:'https://youtu.be/oyEuk8j8imI?si=JB7mmk4saLTFNmAZ' 
+          },
         ],
       }
     },
