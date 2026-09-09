@@ -61,7 +61,7 @@
             <dt>จบจาก</dt><dd>มหาวิทยาลัยเทคโนโลยีสุรนารี</dd>
           </div>
           <div class="facts__row">
-            <dt>สาขา</dt><dd>วิศวกรคอมพิวเตอร์</dd>
+            <dt>สาขา</dt><dd>วิศวกรรมคอมพิวเตอร์</dd>
           </div>
           <div class="facts__row">
             <dt>ตำแหน่ง</dt><dd>Software Engineer</dd>
