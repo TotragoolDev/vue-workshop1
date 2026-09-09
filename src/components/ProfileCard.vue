@@ -61,7 +61,7 @@
             <dt>อายุ</dt><dd>22</dd>
           </div>
           <div class="facts__row">
-            <dt>จบจาก</dt><dd>มหาลัยเทคโนโลยีสุรนารี</dd>
+            <dt>จบจาก</dt><dd>มหาวิทยาลัยเทคโนโลยีสุรนารี</dd>
           </div>
           <div class="facts__row">
             <dt>สาขา</dt><dd>วิศวกรคอมพิวเตอร์</dd>
