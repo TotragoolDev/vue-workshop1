@@ -5,7 +5,7 @@
 
         <v-col cols="12" sm="5">
 
-          <v-img src="/img/spider-profile.jpg" class="image"></v-img>
+          <v-img src="/img/spider-profile.jpg" class="image"/>
 
           <v-card-title>ทักษะ</v-card-title>
 
@@ -64,7 +64,7 @@
               <dt>ตำแหน่ง</dt><dd>Software Engineer</dd>
             </div>
             <div class="facts__row">
-              <dt>ที่ทำงาน</dt><dd>บริษัท อินเทอร์เน็ตประเทศไทย จำกัด (มหาชน)</dd>
+              <dt>ที่ทำงาน</dt><dd>บริษัท อินเทอร์เน็ตประเทศไทย จำกัด</dd>
             </div>
             <div class="facts__row">
               <dt>ทีมฟุตบอลที่เชียร์</dt><dd>Barcelona</dd>

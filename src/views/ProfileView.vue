@@ -2,7 +2,7 @@
 
   <v-container>
 
-    <profile-card/>
+    <ProfileCard/>
 
   </v-container>
 
