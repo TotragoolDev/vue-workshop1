@@ -1,4 +1,5 @@
 <template>
+<div>
   <v-card class="card" rounded="sm" elevation="3">
 
     <v-row>
@@ -133,7 +134,7 @@
   </v-dialog>
 
   </v-card>
-
+</div>
 </template>
 
 <script>
