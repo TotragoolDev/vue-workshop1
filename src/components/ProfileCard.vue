@@ -34,6 +34,7 @@
             target="_blank"
             rel="noopener noreferrer"
             small outlined
+            @click="showImages(hobby)"
           >
             <v-icon left small>{{ hobby.icon }}</v-icon>
             {{ hobby.label }}
@@ -112,6 +113,25 @@
 
     </v-row>
 
+  <v-dialog v-model="dialog" max-width="600">
+    <v-card v-if="selected" rounded="lg">
+
+      <v-window
+        :key="selected.label"
+        :show-arrows="selected.images.length > 1"
+        class="gallery"
+      >
+        <v-window-item
+          v-for="img in selected.images"
+          :key="img"
+        >
+          <v-img :src="img" :alt="selected.label" />
+        </v-window-item>
+      </v-window>
+
+    </v-card>
+  </v-dialog>
+
   </v-card>
 
 </template>
@@ -122,6 +142,9 @@ export default {
   
     data() {
      return {
+
+        dialog: false,
+        selected: null,
 
         skills: [
           { label: 'HTML/CSS' },
@@ -153,22 +176,41 @@ export default {
         hobbies: [
           { label: 'ดูฟุตบอล', 
             icon: 'mdi-soccer',
-            href:'https://www.google.com/search?q=barcelona' 
+            images: [
+            '/img/Lionel Messi Fc BARCELONA.jpg',
+            '/img/Esquadrão Imortal - Barcelona 2014-2017 - Imortais Do Futebol.jpg',
+            '/img/LAMINE YAMAL.jpg',
+          ], 
           },
           { label: 'เล่นเกม', 
             icon: 'mdi-controller',
-            href:'https://www.google.com/search?q=valorant'  
+            images: [
+            '/img/valo.jpg',
+          ],  
           },
           { label: 'ดูหนังและซีรี่ย์', 
             icon: 'mdi-movie-open-outline',
-            href:'https://www.google.com/search?q=game of thrones'
+            images: [
+            '/img/GOT.jpg',
+            '/img/HarryPotter.jpg',
+          ],
           },
           { label: 'ฟังเพลง', 
             icon: 'mdi-music-note',
-            href:'https://youtu.be/oyEuk8j8imI?si=JB7mmk4saLTFNmAZ' 
+            images: [
+            '/img/love yourself justin bieber.jpg',
+            '/img/the lazy song- bruno mars.jpg',
+            '/img/cruel summer taylor swift_.jpg',
+          ], 
           },
         ],
       }
+    },
+    methods: {
+    showImages(hobby) {
+      this.selected = hobby
+      this.dialog = true
+      },
     },
 }
 </script>
