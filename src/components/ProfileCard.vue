@@ -33,7 +33,6 @@
             :href="hobby.href"
             :title="hobby.label"
             target="_blank"
-            rel="noopener noreferrer"
             small outlined
             @click="showImages(hobby)"
           >
